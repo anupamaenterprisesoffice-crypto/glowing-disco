@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V16 INSANE TRADING</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+
+<body>
+
+<div class="card login">
+<h2>Login</h2>
+<input id="user" placeholder="Username">
+<input id="pass" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+</div>
+
+<div class="card">
+💰 ₹<span id="bal">0</span>
+</div>
+
+<div class="card">
+<div id="chart"></div>
+</div>
+
+<div class="card">
+<select id="stock"></select>
+<input id="amt" placeholder="Amount">
+<button class="buy" onclick="buy()">BUY</button>
+<button class="sell" onclick="sell()">SELL</button>
+</div>
+
+<div class="card">
+<h3>Portfolio</h3>
+<div id="port"></div>
+</div>
+
+<div class="card">
+<h3>Send Money</h3>
+<input id="toUser" placeholder="Username">
+<input id="sendAmt" placeholder="Amount">
+<button onclick="sendMoney()">Send</button>
+</div>
+
+<div class="card">
+<h3>Chat</h3>
+<div id="chat"></div>
+<input id="msg">
+<button onclick="sendMsg()">Send</button>
+</div>
+
+<div class="card">
+<h3>Private Chat</h3>
+<input id="puser" placeholder="User">
+<input id="pmsg">
+<button onclick="sendPrivate()">Send</button>
+</div>
+
+<div class="card">
+<h3>Leaderboard</h3>
+<div id="leader"></div>
+</div>
+
+<button id="adminBtn" onclick="admin()">⚙️</button>
+
+<script src="app.js"></script>
+</body>
+</html>
